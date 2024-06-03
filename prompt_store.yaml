@@ -1,0 +1,36 @@
+##############################################################################################
+#   Create YAML file content for prompt service flow. Example:                               #
+#                                                                                            #
+#  PromptServices:                                                                           #
+#                                                                                            #
+#    getMathDetails:                                                                         #
+#      prompt: |                                                                             #
+#        You are an expert math teacher. Based on user input below provide assistance.       #
+#                                                                                            #
+#        input: {input}                                                                      #
+#      inputVariables:                                                                       #
+#        - input                                                                             # 
+#      guardrailIdentifier: "test"                                                             #
+#      guardrailVersion:"1"                                                                    #
+#      allowedFoundationModelProviders:                                                      #
+#        - Amazon                                                                            #
+#        - Meta                                                                              #
+#        - Anthropic                                                                         #
+#        - Mistral AI                                                                        #
+#        - Cohere                                                                            #
+##############################################################################################
+
+PromptServices:
+  getMathDetails:
+    prompt: |
+      You are an expert math teacher. Based on user input below provide assistance.
+
+      input: {input}
+    inputVariables:
+      - input
+    allowedFoundationModelProviders:
+      - Amazon
+      - Meta
+      - Anthropic
+      - Mistral AI
+      - Cohere
